@@ -12,18 +12,18 @@ from sopel import module
 locale.setlocale(locale.LC_ALL, 'sv_SE') 
 
 def parseclaes(siten):
-    siten = "https://claes.cash/"
+    siten = "https://claes.cash/tweets.php"
     web_handle = urllib2.urlopen(siten)
     r = requests.get(siten)
 #        if not r.status_code == 200
  #           return None
 
     response = r.text
-    data = json.loads(response)
-    if not data:
-        return None
-    tweets = re.findall('Claes har gjort <span id ="weeksTweetsbetsec" title="Nya tweets hittils"></span>', r.text)
+#   data = json.loads(response)
+#    if not data:
+#       return None
+#  tweets = re.findall('Claes har gjort <span id ="weeksTweetsbetsec" title="Nya tweets hittils"></span>', r.text)
 
 @module.commands('cc') 
 def cc(bot,trigger):
-    bot.say(tweets)
+    bot.say(response)
