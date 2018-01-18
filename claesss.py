@@ -6,6 +6,8 @@ import os
 import requests, json 
 import re 
 import locale 
+from sopel import module
+
 
 locale.setlocale(locale.LC_ALL, 'sv_SE') 
 
